@@ -37,17 +37,17 @@ typedef int32_t i32;
 #endif
 
 #define max(a, b) \
-  ({__typeof__ (a) _a = (a); \
+    ({__typeof__ (a) _a = (a); \
     __typeof__ (b) _b = (b); \
     _a > _b ? _a : _b; })
 
 #define min(a, b) \
-  ({__typeof__ (a) _a = (a); \
+    ({__typeof__ (a) _a = (a); \
      __typeof__ (b) _b = (b); \
      _a < _b ? _a : _b; })
 
 #define countof(x) \
-  ((sizeof(x) / sizeof(0 [x])) / ((size_t)(!(sizeof(x) % sizeof(0 [x])))))
+    ((sizeof(x) / sizeof(0 [x])) / ((size_t)(!(sizeof(x) % sizeof(0 [x])))))
 
 #ifndef DEBUG
 #define DEBUG 0
@@ -64,9 +64,9 @@ typedef int32_t i32;
 // these should be in sync with "OutputFlags" in md.js
 typedef enum OutputFlags
 {
-  OutputFlagHTML = 1 << 0,
-  OutputFlagXHTML = 1 << 1,
-  OutputFlagAllowJSURI = 1 << 2, // allow "javascript:" URIs in links
+    OutputFlagHTML = 1 << 0,
+    OutputFlagXHTML = 1 << 1,
+    OutputFlagAllowJSURI = 1 << 2, // allow "javascript:" URIs in links
 } OutputFlags;
 
 typedef int (*JSTextFilterFun)(
